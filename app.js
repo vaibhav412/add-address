@@ -70,12 +70,13 @@ app.post("/address", function (req, res) {
     });
 });
 
-
-
+//PORT
 let port = process.env.PORT;
 if (port == null || port == "") {
     port = 3000;
 }
-app.listen(port, function () {
-    console.log("Server started at port 3000.");
+
+//Starting a server
+app.listen(port, () => {
+    console.log(`app is running at ${port}`);
 });
