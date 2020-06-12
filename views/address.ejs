@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Address</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+    <h4 style="margin:30px 75px; font-weight: 600;">ADD ADDRESS</h4>
+
+    <div id="map" style=" margin:auto; margin-bottom: 30px;"></div>
+
+    <form action="/address" method="POST">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <input type="text" placeholder=" Name" name="name"
+                    style="width: 70%; height: 50px; margin-bottom: 30px;" required />
+            </div>
+            <div class="col-md-4 text-center">
+                <input type="number" placeholder=" 10-digit mobile number" name="mobile_no"
+                    style="width: 70%; height: 50px; margin-bottom: 30px" required />
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4 text-center">
+                <input type="number" placeholder=" Pincode" name="pincode"
+                    style="width: 70%; height: 50px; margin-bottom: 30px" required />
+            </div>
+            <div class="col-md-4 text-center">
+                <input type="text" placeholder=" Locality" name="locality"
+                    style="width: 70%; height: 50px;margin-bottom: 30px" required />
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 text-center">
+                <textarea rows="3" type="text" placeholder=" Address (Area and Street)" name="address"
+                    style="width: 85.5%; margin-bottom: 30px;" required></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <input type="text" placeholder=" City/District/Town" name="city"
+                    style="width: 70%; height: 50px;margin-bottom: 30px" required />
+            </div>
+            <div class=" col-md-4 text-center">
+                <select name="state" style="width: 70%; height: 50px; margin-bottom: 30px" required>
+                    <option value="">Select State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <input type="text" placeholder=" Landmark (Optional)" name="landmark"
+                    style="width: 70%; height: 50px; margin-bottom: 30px" />
+            </div>
+            <div class=" col-md-4 text-center">
+                <input type="number" placeholder=" Alternate Phone (Optional)" name="alt_phone"
+                    style="width: 70%; height: 50px;margin-bottom: 30px" />
+            </div>
+        </div>
+        <div class="radio" style="margin-left: 75px;">
+            <h6 style="margin-bottom: 10px;">Address Type</h6>
+            <label style="margin-right: 30px;"><input type="radio" name="optradio" value="Home" required> Home</label>
+            <label><input type="radio" name="optradio" value="Work" required> Work</label>
+        </div>
+
+
+        <div style="margin-left: 75px; margin-top: 20px; margin-bottom: 40px;">
+            <button type="submit" class="btn" style="background-color: blueviolet; color: white; width: 200px;">
+                Add Address
+            </button>
+            <a href="/" style="font-size: large; margin-left: 20px; color: blueviolet;"> Cancel</a>
+        </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqRpEtKXoHvx8efw8fVq7t1LYGUriVxuw&callback=initMap"
+        type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        x = navigator.geolocation;
+
+        x.getCurrentPosition(success, failure);
+
+        function success(position) {
+            var myLat = position.coords.latitude;
+            var myLong = position.coords.longitude;
+
+            var coords = new google.maps.LatLng(myLat, myLong);
+
+            var mapOptions = {
+
+                zoom: 12,
+                center: coords,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+
+            }
+
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            var marker = new google.maps.Marker({ map: map, position: coords });
+
+        }
+
+        function failure() {
+
+        }
+
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
