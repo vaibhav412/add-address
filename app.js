@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.connect("mongodb+srv://vaibhav412:v12345a@cluster0-cgybk.mongodb.net/addressDB", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false
 }
 );
 mongoose.set("useCreateIndex", true);
@@ -68,6 +69,16 @@ app.post("/address", function (req, res) {
         }
     });
 });
+
+app.post("/delete", function (req, res) {
+    const Id = req.body.btn;
+    User.findByIdAndRemove(Id, function (err) {
+        if (!err) {
+            console.log("Successfully deleted item.");
+            res.redirect("/");
+        }
+    });
+})
 
 //PORT
 let port = process.env.PORT;

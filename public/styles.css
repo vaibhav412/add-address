@@ -1,3 +1,5 @@
+/*************************************** address.ejs style sheet **********************************/
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -13,4 +15,72 @@ input[type=number] {
 #map{
     width: 90%;
     height: 400px;
+    margin:auto; 
+    margin-bottom: 30px;
+}
+
+.heading{
+  margin:30px 55px; 
+  font-weight: 600;
+}
+
+.input-field{
+  width: 70%; 
+  height: 50px; 
+  margin-bottom: 30px;
+}
+
+.address{
+  width: 85.5%; 
+  margin-bottom: 30px;
+}
+
+.add_typ{
+  margin-right: 30px; 
+  margin-bottom: 10px;
+}
+
+.add-btn{
+  background-color: blueviolet;
+  color: white;
+  width: 200px;
+}
+
+.cancel{
+  font-size: large; 
+  margin-left: 20px; 
+  color: blueviolet;
+}
+
+.add_div{
+  margin-left: 75px; 
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/******************************************************* home.ejs *********************************/
+
+
+
+.add-typ{
+  background-color: grey; 
+  color: white; 
+  padding-left: 5px; 
+  padding-right: 5px;
+}
+
+.delete{
+  background-color: red; 
+  color: white;
+}
+
+.add-address{
+  background-color: blueviolet; 
+  width: 200px; 
+  margin-left: 55px;
+}
+
+.add-link{
+  text-decoration: none; 
+  color: white;
 }

@@ -12,49 +12,49 @@
 </head>
 
 <body>
-    <h4 style="margin:30px 75px; font-weight: 600;">ADD ADDRESS</h4>
+    <h4 class="heading">ADD ADDRESS</h4>
 
-    <div id="map" style=" margin:auto; margin-bottom: 30px;"></div>
+    <div id="map"></div>
 
     <form action="/address" method="POST">
+
         <div class="row">
             <div class="col-md-4 text-center">
-                <input type="text" placeholder=" Name" name="name"
-                    style="width: 70%; height: 50px; margin-bottom: 30px;" required />
+                <input type="text" placeholder=" Name" name="name" class="input-field" required />
             </div>
             <div class="col-md-4 text-center">
-                <input type="number" placeholder=" 10-digit mobile number" name="mobile_no"
-                    style="width: 70%; height: 50px; margin-bottom: 30px" required />
+                <input type="number" placeholder=" 10-digit mobile number" name="mobile_no" class="input-field"
+                    required />
             </div>
         </div>
 
         <div class="row">
-
             <div class="col-md-4 text-center">
-                <input type="number" placeholder=" Pincode" name="pincode"
-                    style="width: 70%; height: 50px; margin-bottom: 30px" required />
+                <input type="number" placeholder=" Pincode" name="pincode" class="input-field" required />
             </div>
             <div class="col-md-4 text-center">
-                <input type="text" placeholder=" Locality" name="locality"
-                    style="width: 70%; height: 50px;margin-bottom: 30px" required />
+                <input type="text" placeholder=" Locality" name="locality" class="input-field" required />
             </div>
-
         </div>
+
+        <!----------------------------------- ADDRESS -------------------------------------->
 
         <div class="row">
             <div class="col-md-8 text-center">
-                <textarea rows="3" type="text" placeholder=" Address (Area and Street)" name="address"
-                    style="width: 85.5%; margin-bottom: 30px;" required></textarea>
+                <textarea rows="3" type="text" placeholder=" Address (Area and Street)" name="address" class="address"
+                    required></textarea>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-4 text-center">
-                <input type="text" placeholder=" City/District/Town" name="city"
-                    style="width: 70%; height: 50px;margin-bottom: 30px" required />
+                <input type="text" placeholder=" City/District/Town" name="city" class="input-field" required />
             </div>
+
+            <!-------------------------- STATE ---------------------------------->
+
             <div class=" col-md-4 text-center">
-                <select name="state" style="width: 70%; height: 50px; margin-bottom: 30px" required>
+                <select name="state" class="input-field" required>
                     <option value="">Select State</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -98,35 +98,36 @@
 
         <div class="row">
             <div class="col-md-4 text-center">
-                <input type="text" placeholder=" Landmark (Optional)" name="landmark"
-                    style="width: 70%; height: 50px; margin-bottom: 30px" />
+                <input type="text" placeholder=" Landmark (Optional)" name="landmark" class="input-field" />
             </div>
             <div class=" col-md-4 text-center">
-                <input type="number" placeholder=" Alternate Phone (Optional)" name="alt_phone"
-                    style="width: 70%; height: 50px;margin-bottom: 30px" />
+                <input type="number" placeholder=" Alternate Phone (Optional)" name="alt_phone" class="input-field" />
             </div>
         </div>
+
         <div class="radio" style="margin-left: 75px;">
-            <h6 style="margin-bottom: 10px;">Address Type</h6>
-            <label style="margin-right: 30px;"><input type="radio" name="optradio" value="Home" required> Home</label>
+            <h6>Address Type</h6>
+            <label class="add_typ"><input type="radio" name="optradio" value="Home" required> Home</label>
             <label><input type="radio" name="optradio" value="Work" required> Work</label>
         </div>
 
 
-        <div style="margin-left: 75px; margin-top: 20px; margin-bottom: 40px;">
-            <button type="submit" class="btn" style="background-color: blueviolet; color: white; width: 200px;">
-                Add Address
-            </button>
-            <a href="/" style="font-size: large; margin-left: 20px; color: blueviolet;"> Cancel</a>
+        <div class="add_div">
+            <button type="submit" class="btn add-btn">Add Address </button>
+            <a href="/" class="cancel"> Cancel</a>
         </div>
+
     </form>
+
+    <!--------------------------------------------- SCRIPTS ------------------------------------------>
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqRpEtKXoHvx8efw8fVq7t1LYGUriVxuw&callback=initMap"
         type="text/javascript"></script>
 
-    <script type="text/javascript">
+    <!------------------------ ADDING MAP ---------------------->
 
+    <script type="text/javascript">
         x = navigator.geolocation;
 
         x.getCurrentPosition(success, failure);
@@ -151,13 +152,8 @@
 
         }
 
-        function failure() {
-
-        }
-
+        function failure() { }
     </script>
-
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -168,6 +164,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
