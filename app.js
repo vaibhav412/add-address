@@ -9,9 +9,8 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
-let addresses = [];
 
-mongoose.connect("mongodb://localhost:27017/addressDB", {
+mongoose.connect("mongodb+srv://vaibhav412:v12345a@cluster0-cgybk.mongodb.net/addressDB", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }
