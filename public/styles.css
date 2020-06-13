@@ -58,6 +58,12 @@ input[type=number] {
   margin-bottom: 40px;
 }
 
+@media(max-width: 767px) {
+
+  .address {
+      width: 70%;
+  }
+}
 /******************************************************* home.ejs *********************************/
 
 
