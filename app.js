@@ -28,7 +28,10 @@ const addressSchema = new mongoose.Schema({
     state: String,
     landmark: String,
     alt_phone: Number,
-    add_type: String
+    add_type: String,
+    email: String,
+    nationality: String,
+    checkbox: String
 });
 
 const User = new mongoose.model("User", addressSchema);
@@ -58,7 +61,10 @@ app.post("/address", function (req, res) {
             state: req.body.state,
             landmark: req.body.landmark,
             alt_phone: req.body.alt_phone,
-            add_type: req.body.optradio
+            add_type: req.body.optradio,
+            email: req.body.email,
+            nationality: req.body.nationality,
+            checkbox: req.body.check
         });
     newUser.save(function (err) {
         if (err) {

@@ -11,8 +11,8 @@
 
 </head>
 
-<body>
-    <h4 class="heading">ADD ADDRESS</h4>
+<body style="background-color: #f7fbe1;">
+    <div class="container-fluid heading1"><h4 style="color: white;">ADD ADDRESS</h4></div>
 
     <div id="map"></div>
 
@@ -105,12 +105,73 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <input type="email" placeholder=" Email Id" name="email" class="input-field" required />
+            </div>
+
+            <!-------------------------- NATIONALITY ---------------------------------->
+
+            <div class=" col-lg-4 text-center">
+                <select name="nationality" class="input-field" required>
+                    <option value="">Select Nationality</option>
+                    <option value="afghan">Afghan</option>
+                    <option value="albanian">Albanian</option>
+                    <option value="algerian">Algerian</option>
+                    <option value="american">American</option>
+                    <option value="australian">Australian</option>
+                    <option value="austrian">Austrian</option>
+                    <option value="azerbaijani">Azerbaijani</option>
+                    <option value="bahamian">Bahamian</option>
+                    <option value="bahraini">Bahraini</option>
+                    <option value="bangladeshi">Bangladeshi</option>
+                    <option value="barbadian">Barbadian</option>
+                    <option value="barbudans">Barbudans</option>
+                    <option value="batswana">Batswana</option>
+                    <option value="belarusian">Belarusian</option>
+                    <option value="belgian">Belgian</option>
+                    <option value="belizean">Belizean</option>
+                    <option value="beninese">Beninese</option>
+                    <option value="bhutanese">Bhutanese</option>
+                    <option value="bolivian">Bolivian</option>
+                    <option value="bosnian">Bosnian</option>
+                    <option value="brazilian">Brazilian</option>
+                    <option value="british">British</option>
+                    <option value="canadian">Canadian</option>
+                    <option value="cape verdean">Cape Verdean</option>
+                    <option value="central african">Central African</option>
+                    <option value="chadian">Chadian</option>
+                    <option value="chilean">Chilean</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="colombian">Colombian</option>
+                    <option value="finnish">Finnish</option>
+                    <option value="french">French</option>
+                    <option value="hungarian">Hungarian</option>
+                    <option value="icelander">Icelander</option>
+                    <option value="indian">Indian</option>
+                    <option value="indonesian">Indonesian</option>
+                    <option value="iranian">Iranian</option>
+                    <option value="iraqi">Iraqi</option>
+                    <option value="irish">Irish</option>
+                    <option value="israeli">Israeli</option>
+                    <option value="italian">Italian</option>
+                    <option value="ivorian">Ivorian</option>
+                    <option value="jamaican">Jamaican</option>
+                    <option value="japanese">Japanese</option>
+                </select>
+            </div>
+        </div>
+
+
         <div class="radio" style="margin-left: 75px;">
             <h6>Address Type</h6>
             <label class="add_typ"><input type="radio" name="optradio" value="Home" required> Home</label>
             <label><input type="radio" name="optradio" value="Work" required> Work</label>
         </div>
 
+        <div class="radio" style="margin-left: 75px;">
+            <label class="add_typ"><input type="checkbox" value="true" name="check" required> I accept the <a href="">Terms and Conditions</a>.</label>
+        </div>
 
         <div class="add_div">
             <button type="submit" class="btn add-btn">Add Address </button>

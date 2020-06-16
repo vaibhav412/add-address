@@ -11,13 +11,13 @@
 
 </head>
 
-<body>
-
-    <h4 class="heading">MANAGE ADDRESS</h4>
-
+<body style="background-color: #f7fbe1;">
+<div class="container-fluid heading2"><h4 style="color: white;">MANAGE ADDRESS</h4></div>
     <%  users.forEach(function(user){ %>
 
-    <div class="container-fluid" style="margin-left: 40px;">
+<div class="row">
+
+    <div class="col-lg-6" style="margin-left: 70px; border-width: 1px; border-style: solid ;border-color: black; padding-top: 20px; padding-bottom: 20px;">
 
         <span class="add-typ"><%=user.add_type%></span>
 
@@ -25,7 +25,9 @@
 
         <p><b>Mobile No.:</b> <%=user.mobile_no%></p>
         <p><b>Address:</b> <%=user.address%>, <%=user.city%>, <%=user.state%> - <%=user.pincode%></p>
-        <p><b>Locality:</b> <%=user.locality%></p>
+        <p><b>Locality:</b> <%=user.locality%>  <b style="margin-left: 70px;">Nationality:</b> <%=user.nationality%></p>
+        <p><b>Email Id:</b> <%=user.email%></p>
+        
 
         <% if (user.landmark){ %>
         <p><b>Landmark:</b> <%=user.landmark%></p>
@@ -41,10 +43,11 @@
             <div class="item">
                 <button name="btn" class="btn delete" value="<%=user._id%>" onChange="this.form.submit()">Delete
         Address</button>
-    </div>
-    </form>
+                 </div>
+                 </form>
 
     </div>
+</div>
     <hr>
 
     <% }) %>

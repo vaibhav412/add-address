@@ -19,9 +19,12 @@ input[type=number] {
     margin-bottom: 30px;
 }
 
-.heading{
-  margin:30px 55px; 
-  font-weight: 600;
+.heading1{
+  background-color: black; 
+  height: 70px; 
+  padding-top: 20px; 
+  margin-bottom: 30px; 
+  padding-left: 75px;
 }
 
 .input-field{
@@ -58,6 +61,11 @@ input[type=number] {
   margin-bottom: 40px;
 }
 
+
+input{
+  padding-left: 5px;
+}
+
 @media(max-width: 991px) {
 
   .address {
@@ -67,7 +75,13 @@ input[type=number] {
 }
 /******************************************************* home.ejs *********************************/
 
-
+.heading2{
+  background-color: black; 
+  height: 70px; 
+  padding-top: 20px; 
+  margin-bottom: 30px; 
+  padding-left: 55px;
+}
 
 .add-typ{
   background-color: grey; 
