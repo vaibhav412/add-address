@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-mongoose.connect("mongodb+srv://vaibhav412:v12345a@cluster0-cgybk.mongodb.net/addressDB", {
+mongoose.connect("MONGODB_DATABASE_LINK", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
