@@ -94,19 +94,19 @@ input{
 }
 
 .add-typ{
-  background-color: grey; 
+  background-color: #3b6978; 
   color: white; 
   padding-left: 5px; 
   padding-right: 5px;
 }
 
 .delete{
-  background-color: red; 
+  background-color: #3b6978; 
   color: white;
 }
 
 .add-address{
-  background-color: blueviolet; 
+  background-color: #3b6978; 
   width: 200px; 
   margin-left: 55px;
 }
