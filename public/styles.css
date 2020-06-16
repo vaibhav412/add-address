@@ -120,3 +120,19 @@ input{
   text-decoration: none;
   color: black;
 }
+
+@media(max-width: 600px) {
+
+  .div-1 {
+      margin-left: 30px;
+  }
+  
+.heading2{
+  padding-left: 15px
+}
+
+.add-address{
+  margin-left: 15px;
+}
+
+}
